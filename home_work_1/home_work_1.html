@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ_1</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    
+<div id="application"> 
+
+
+<article>
+    <article v-for="cat in cats">
+        <h3>{{cat.name}}</h3>
+        <div>
+            <span>{{cat.age}}</span>
+            <span>{{cat.color}}</span>
+        </div>
+        <img :src="cat.img" :alt="cat.name">
+        <a href="#">Подробнее</a>
+    </article>
+   
+</article>
+</div>
+
+
+<script src="js/home_work_1.js"></script>
+</body>
+</html>

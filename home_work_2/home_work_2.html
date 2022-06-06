@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ_2</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    
+<div id="app"> 
+<table>
+    <tr>
+      <td><a @click="sortParam='title'">Наименование </a></td>
+      <td><a @click="sortParam='price'">Цена </a></td>
+      <td><a @click="sortParam='count'">Остаток</a></td> </tr>
+    <tr v-for="good in sortedList">
+      <td>{{good.title}}</td>
+      <td>{{good.price}}</td>
+      <td :class="{many: good.count > 20, zero: good.count === 0, notMany: good.count <= 20 && good.count > 0}">     </td>
+      <td :class="classObj">     </td>
+    </tr>
+  </table>
+</div>
+
+
+<script src="js/home_work_2.js"></script>
+</body>
+</html>
